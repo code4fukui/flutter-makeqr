@@ -1,31 +1,40 @@
-# makeqr
+# flutter-makeqr
 
-A new Flutter project to show [QR-Code by DENSO WAVE](https://www.denso-wave.com/ja/adcd/fundamental/2dcode/qrc/index.html).
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
 
-## How to create this app on Flutter
+A simple Flutter application that generates a "QR Counter". The QR code's encoded URL increments with each button press.
 
-```
-mkdir makeqr
-flutter create .
-```
-add dependency "[qr_flutter](https://pub.dev/packages/qr_flutter/install): ^4.0.0" in pubspec.yaml
-```
-flutter pub get
-```
-add QrImage and "import 'package:qr_flutter/qr_flutter.dart';" code in main.dart
-```
-flutter run --release
-```
+This project uses [QR-Code by DENSO WAVE](https://www.denso-wave.com/ja/adcd/fundamental/2dcode/qrc/index.html).
+
+## Features
+
+- **Dynamic QR Code Generation:** Displays a QR code based on a string.
+- **Interactive Counter:** A floating action button increments a number within the QR code's encoded URL.
+
+## Prerequisites
+
+- Flutter SDK: `>=2.16.1 <3.0.0`
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/your-username/flutter-makeqr.git
+    cd flutter-makeqr
+    ```
 
-A few resources to get you started if this is your first Flutter project:
+2.  **Install dependencies:**
+    ```bash
+    flutter pub get
+    ```
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+3.  **Run the application:**
+    ```bash
+    flutter run
+    ```
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The application will launch and display a QR code for the URL `https://fukuno.jig.jp/0`. Press the floating action button to increment the number in the URL (e.g., to `.../1`, `.../2`, and so on).
+
+## License
+
+MIT License — see [LICENSE](LICENSE).
